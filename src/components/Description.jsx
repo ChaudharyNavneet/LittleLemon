@@ -30,17 +30,10 @@ export const Description = () => (
       <VStack spacing={4}>
         <Image
           borderRadius="lg"
-          src={chef1}
-          alt="Chef 1"
-          backgroundPosition="center"
-          maxH='250px'
-        />
-        <Image
-          borderRadius="lg"
           src={chef2}
           alt="Chef 2"
           backgroundPosition="center"
-          maxH='250px'
+          maxH='300px'
           
         />
       </VStack>
