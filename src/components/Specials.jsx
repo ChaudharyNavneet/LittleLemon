@@ -51,7 +51,7 @@ export const Specials = () => {
         mb={8}
       >
         <Heading size="lg">This week’s specials!</Heading>
-        <Button colorScheme="yellow" size="md" onClick={() => navigate('/menu')}>
+        <Button colorScheme="yellow" size="md" onClick={() => navigate('menu')}>
           Online Menu
         </Button>
       </Flex>

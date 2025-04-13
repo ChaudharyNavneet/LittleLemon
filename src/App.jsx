@@ -1,9 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { BookingForm } from './components/BookingForm';
 import { PlaceholderPage } from './pages/PlaceholderPage';
-
-// move this out to its own file if preferred
 import { Hero } from './components/Hero';
 import { Specials } from './components/Specials';
 import { Testimonials } from './components/Testimonials';
@@ -28,6 +26,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/reservations" element={<BookingForm />} />
         <Route path="/menu" element={<PlaceholderPage title="Menu" />} />
         <Route path="/about" element={<PlaceholderPage title="About Us" />} />

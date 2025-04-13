@@ -6,11 +6,11 @@ export const Header = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Menu", href: "/menu" },
-    { label: "Reservations", href: "/reservations" },
-    { label: "Order Online", href: "/order" },
-    { label: "Login", href: "/login" },
+    { label: "About", href: "about" },
+    { label: "Menu", href: "menu" },
+    { label: "Reservations", href: "reservations" },
+    { label: "Order Online", href: "order" },
+    { label: "Login", href: "login" },
   ];
 
   return (

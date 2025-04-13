@@ -13,7 +13,7 @@ export const Hero=() => {
         <Text mt={4}>
           We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </Text>
-        <Button mt={6} colorScheme="yellow" onClick={() => navigate('/reservations')}>
+        <Button mt={6} colorScheme="yellow" onClick={() => navigate('reservations')}>
           Reserve a Table
         </Button>
       </Box>
