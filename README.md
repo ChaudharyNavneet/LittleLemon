@@ -1,4 +1,4 @@
-# 🍽️ Table Booking for little lemon
+# 🍽️ Table Booking for the little lemon
 
 A responsive and modern React web application for **Little Lemon Restaurant** that allows users to reserve a table effortlessly. Built as part of the Coursera Meta Front-End Developer Capstone Project.
 
@@ -16,3 +16,7 @@ A responsive and modern React web application for **Little Lemon Restaurant** th
 -install node modules
 -run the app using `npm run dev` command
 
+## Here Is the look :
+![image](https://github.com/user-attachments/assets/03e9ca1a-08dc-4b59-a218-77e05b304da8)
+![image](https://github.com/user-attachments/assets/64429419-3fd6-412e-9bfe-17c79afd9a1d)
+![image](https://github.com/user-attachments/assets/7a3c010b-9538-4044-9eaa-88efc0c9fb5b)
