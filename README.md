@@ -10,17 +10,9 @@ A responsive and modern React web application for **Little Lemon Restaurant** th
 - 💅 **Modern UI** – Designed with Chakra UI for a clean and accessible interface.
 - 🔁 **State Management** – Uses React Hooks and state lifting for smooth data flow.
 
-## 🛠️ Built With
-
-- [React](https://reactjs.org/)
-- [Chakra UI](https://chakra-ui.com/)
-- [Formik](https://formik.org/)
-- [Yup](https://github.com/jquense/yup)
-- [Vite](https://vitejs.dev/) (for lightning-fast development)
-
-## 📸 Screenshots
-
-> _Add screenshots or GIFs here to show how the app looks and works_
-
 ## 📂 Project Structure
+
+-clone the repo
+-install node modules
+-run the app using `npm run dev` command
 
