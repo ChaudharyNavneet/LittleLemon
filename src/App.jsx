@@ -7,6 +7,7 @@ import { Specials } from './components/Specials';
 import { Testimonials } from './components/Testimonials';
 import { Description } from './components/Description';
 import { Footer } from './components/Footer';
+import { useState } from 'react';
 
 function Home() {
   return (
@@ -21,13 +22,16 @@ function Home() {
 }
 
 export default function App() {
+
+  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00"]);
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
-        <Route path="/reservations" element={<BookingForm />} />
+        <Route path="/reservations" element={<BookingForm availableTimes={availableTimes} />} />
         <Route path="/menu" element={<PlaceholderPage title="Menu" />} />
         <Route path="/about" element={<PlaceholderPage title="About Us" />} />
         <Route path="/order" element={<PlaceholderPage title="Order Online" />} />

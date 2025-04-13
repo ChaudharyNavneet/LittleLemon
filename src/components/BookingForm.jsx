@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -17,22 +17,22 @@ import {
   ModalFooter,
   useDisclosure,
   Text,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-export const BookingForm = () => {
+export const BookingForm = ({availableTimes}) => {
   const [formData, setFormData] = useState({
-    name: '',
-    date: '',
-    time: '',
-    guests: '',
-    occasion: '',
+    name: "",
+    date: "",
+    time: "",
+    guests: "",
+    occasion: "",
   });
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -52,16 +52,20 @@ export const BookingForm = () => {
           </FormControl>
           <FormControl isRequired>
             <FormLabel>Date</FormLabel>
-            <Input type="date" name="date" value={formData.date} onChange={handleChange} />
+            <Input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+            />
           </FormControl>
           <FormControl isRequired>
             <FormLabel>Time</FormLabel>
             <Select name="time" value={formData.time} onChange={handleChange}>
               <option value="">Select</option>
-              <option>17:00</option>
-              <option>18:00</option>
-              <option>19:00</option>
-              <option>20:00</option>
+              {availableTimes.map((time) => (
+                <option key={time}>{time}</option>
+              ))}
             </Select>
           </FormControl>
           <FormControl isRequired>
@@ -77,7 +81,11 @@ export const BookingForm = () => {
           </FormControl>
           <FormControl>
             <FormLabel>Occasion</FormLabel>
-            <Select name="occasion" value={formData.occasion} onChange={handleChange}>
+            <Select
+              name="occasion"
+              value={formData.occasion}
+              onChange={handleChange}
+            >
               <option value="">None</option>
               <option>Birthday</option>
               <option>Anniversary</option>
@@ -96,9 +104,15 @@ export const BookingForm = () => {
           <ModalHeader>Reservation Confirmed</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>Thank you, <b>{formData.name}</b>! Your table is reserved on <b>{formData.date}</b> at <b>{formData.time}</b> for <b>{formData.guests}</b> guest(s).</Text>
+            <Text>
+              Thank you, <b>{formData.name}</b>! Your table is reserved on{" "}
+              <b>{formData.date}</b> at <b>{formData.time}</b> for{" "}
+              <b>{formData.guests}</b> guest(s).
+            </Text>
             {formData.occasion && (
-              <Text mt={2}>Occasion: <b>{formData.occasion}</b></Text>
+              <Text mt={2}>
+                Occasion: <b>{formData.occasion}</b>
+              </Text>
             )}
           </ModalBody>
           <ModalFooter>
