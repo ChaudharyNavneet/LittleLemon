@@ -1,11 +1,10 @@
-// BookingForm.tsx
 import {
   Box, Button, FormControl, FormLabel, Input, Select, Heading, VStack, FormErrorMessage
 } from '@chakra-ui/react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
-export const BookingForm = () => {
+export const BookingForm = ({availableTimes}) => {
   const validationSchema = Yup.object({
     name: Yup.string().required('Name is required'),
     date: Yup.date().required('Date is required'),
@@ -60,11 +59,10 @@ export const BookingForm = () => {
                   <FormControl isInvalid={form.errors.time && form.touched.time} isRequired>
                     <FormLabel>Time</FormLabel>
                     <Select {...field}>
-                      <option value="">Select</option>
-                      <option>17:00</option>
-                      <option>18:00</option>
-                      <option>19:00</option>
-                      <option>20:00</option>
+                    <option value="">Select</option>
+                    {availableTimes.map((time) => (
+                      <option key={time}>{time}</option>
+                    ))}
                     </Select>
                     <FormErrorMessage>{form.errors.time}</FormErrorMessage>
                   </FormControl>
