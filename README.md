@@ -14,8 +14,10 @@ A responsive and modern React web application for **Little Lemon Restaurant** th
 
 - clone the repo
 - install node modules
-- run the app use `npm run dev` command
-- to run the tests use  `npx vitest` command
+- To run the app use `npm run dev` command
+- To run the tests use  `npx vitest` command
+- Form Validations are added in the BookingForm Component
+- Tests are added for the component and validatuion in sigle test file : BookingForm.test
 
 ## Here Is the look :
 ![image](https://github.com/user-attachments/assets/03e9ca1a-08dc-4b59-a218-77e05b304da8)

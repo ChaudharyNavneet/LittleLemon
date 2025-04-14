@@ -15,6 +15,17 @@ describe('BookingForm', () => {
     expect(screen.getByRole('button', { name: /reserve/i })).toBeInTheDocument();
   });
 
+  test('shows validation errors on empty submit', async () => {
+    render(<BookingForm availableTimes={['17:00', '18:00', '19:00']} />);
+  
+    fireEvent.click(screen.getByRole('button', { name: /reserve/i }));
+  
+    expect(await screen.findByText(/name is required/i)).toBeInTheDocument();
+    expect(await screen.findByText(/date is required/i)).toBeInTheDocument();
+    expect(await screen.findByText(/time is required/i)).toBeInTheDocument();
+    expect(await screen.findByText(/number of guests is required/i)).toBeInTheDocument();
+  });
+  
 
   test('submits valid form data', async () => {
     window.alert = vi.fn(); // or jest.fn() if using Jest
